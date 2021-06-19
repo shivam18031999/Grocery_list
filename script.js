@@ -3,7 +3,6 @@ list = document.querySelector('ul');
 title1 = document.querySelector('.title1');
 
 let curListItem;
-localStorage.clear();
 const createListElement = (listItemObject) => {
 
     const listItem = document.createElement('LI');
