@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
    
     <script src="script.js"  defer></script>
-    <title>Sprinklr Grocery</title>
+    <title>Build as an assignment</title>
   </head>
   <body>
      <header class="Disc">
