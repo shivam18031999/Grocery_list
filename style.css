@@ -1,0 +1,170 @@
+body {
+  background-color: blue;
+}
+.Disc{
+    height : 5vh;
+    background-color: black;
+    margin:0;
+}
+.Disc div{
+    color:#ffffff;
+    width: 20vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1% 40vw;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  margin: 5vh auto;
+  width: 90vw;
+  height: 80vh;
+  border: 1px solid black;
+  display: flex;
+  flex: 1:1;
+}
+.add_edit_part{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    max-width: 35vw;
+}
+.grocery_list_part{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+.title1 {
+  width: 10vw;
+  margin: 2vh auto;
+  margin-bottom: 0;
+  padding: 1% 2%;
+  font-size: 1.25vw;
+  border: 1px solid white;
+  border-radius: 1vw;
+  background-color: #800080;
+  color: white;
+}
+
+.form_item {
+  background-color: #c284e1;
+  margin: 2vh auto;
+  width: 30vw;
+  padding: 1rem 2%;
+  display: flex;
+  border: 1px solid #8a2db9;
+  border-radius: 1vw;
+  flex-direction: column;
+}
+label {
+  margin-top: 2%;
+  font-size: 1.25rem;
+}
+#item_name {
+  margin-top: 1%;
+  width: 90%;
+  padding: 1% 1%;
+  font-size: 1rem;
+  border-radius: 0.5vw;
+  border-color: blue;
+}
+
+#item_quantity {
+  margin-top: 1%;
+  width: 30%;
+  padding: 1% 1%;
+  font-size: 1rem;
+  border-radius: 0.5vw;
+  border-color: blue;
+}
+#add_edit_button {
+  margin-right: 10%;
+  padding: 0.25% 0.25%;
+  width: 10%;
+  height: 4vh;
+  font-size: 1vw;
+  align-self: flex-end;
+  color: white;
+  border-color: white;
+  border-radius: 0.7vw;
+  background-color: #800080;
+}
+.title2 {
+    width: 7vw;
+    margin: 2vh auto;
+    margin-bottom: 0;
+    padding: 1% 2%;
+    font-size: 1.25vw;
+    border: 1px solid white;
+    border-radius: 1vw;
+    background-color: #4b4b4b;
+    color: white;
+  }
+.grocery_list {
+  margin: 2vh auto;
+  width: 95%;
+  max-height: 40vh;
+  padding: 2% 0;
+  overflow: auto;
+  border: 1px solid black;
+  border-radius: 1vw;
+  background-color: black;
+}
+.list_item {
+  display: flex;
+  margin: 2% 2%;
+  height: 5vh;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.list_item_discription {
+  display: flex;
+  flex: 1;
+  border: 1px solid black;
+  background-color: #4b4b4b;
+  border-radius: 2vw ;
+  padding: 1% 1%;
+  padding-right: 0%;
+  font-size: 1.5rem;
+  color: white;
+  overflow: hidden;
+}
+.list_item_name {
+  flex: 1;
+  padding: auto 1%;
+}
+.list_item_quantity {
+  width: 10%;
+  padding: 2% auto !important ;
+  text-align: center;
+}
+
+.edit {
+  padding: 1% 1%;
+  width: 3%;
+  font-size: larger;
+  color: white;
+  background-color: black;
+}
+.delete {
+  padding: 1% 1%;
+  width: 3%;
+  font-size: larger;
+  color: white;
+  background-color: black;
+}
+/* width
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+/* ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  /* Handle */
+/* ::-webkit-scrollbar-thumb {
+    /* background: #888; 
+  }  */
