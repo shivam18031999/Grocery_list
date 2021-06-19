@@ -1,18 +1,29 @@
 body {
-  background-color: blue;
+  padding: 0;
+  margin : auto 0;
 }
 .Disc{
-    height : 5vh;
+    height : 7%;
     background-color: black;
     margin:0%;
     padding: 0%;
+    display: flex;
 }
 .Disc div{
     color:#ffffff;
     width: 20vw;
-    font-size: 1.5vw;
+    font-size: 1.75vw;
     font-weight: bold;
     padding: 1% 40vw;
+    flex:1;
+}
+.Disc i{
+    align-self: right;
+    color: white;
+    width: 5%;
+    text-align: center;
+    margin: 0.8% auto;
+    font-size: 2vw;
 }
 
 .container {
@@ -29,7 +40,7 @@ body {
     display: flex;
     flex-direction: column;
     flex:1;
-    max-width: 35vw;
+    max-width: 40%;
 }
 .grocery_list_part{
     display: flex;
@@ -37,22 +48,25 @@ body {
     flex:1;
 }
 .title1 {
-  width: 10vw;
-  margin: 2vh auto;
+  width: 30%;
+  margin: 3% auto;
+  padding: 1% 1%;
   margin-bottom: 0;
-  padding: 1% 2%;
   font-size: 1.25vw;
-  border: 1px solid white;
-  border-radius: 1vw;
-  background-color: #800080;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  border: 1px solid white;
+  border-radius: 0.75vw;
+  background-color: #800080;
 }
 
 .form_item {
   background-color: #c284e1;
-  margin: 2vh auto;
-  width: 30vw;
-  padding: 1rem 2%;
+  margin: 3% auto;
+  width: 90%;
+  padding: 2% 2%;
   display: flex;
   border: 1px solid #8a2db9;
   border-radius: 1vw;
@@ -60,13 +74,13 @@ body {
 }
 label {
   margin-top: 2%;
-  font-size: 1.25rem;
+  font-size: 1.25vw;
 }
 #item_name {
   margin-top: 1%;
   width: 90%;
   padding: 1% 1%;
-  font-size: 1rem;
+  font-size: 1vw;
   border-radius: 0.5vw;
   border-color: blue;
 }
@@ -75,7 +89,7 @@ label {
   margin-top: 1%;
   width: 30%;
   padding: 1% 1%;
-  font-size: 1rem;
+  font-size: 1vw;
   border-radius: 0.5vw;
   border-color: blue;
 }
@@ -83,7 +97,7 @@ label {
   margin-right: 10%;
   padding: 0.25% 0.25%;
   width: 10%;
-  height: 4vh;
+  height: 2vw;
   font-size: 1vw;
   align-self: flex-end;
   color: white;
@@ -92,20 +106,23 @@ label {
   background-color: #800080;
 }
 .title2 {
-    width: 7vw;
-    margin: 2vh auto;
+    width: 16%;
+    margin: 2% auto;
+    padding: 0.75% 1%;
     margin-bottom: 0;
-    padding: 1% 2%;
     font-size: 1.25vw;
-    border: 1px solid white;
-    border-radius: 1vw;
-    background-color: #4b4b4b;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     color: white;
+    border: 1px solid white;
+    border-radius: 0.75vw;
+    background-color: #4b4b4b;
   }
 .grocery_list {
-  margin: 2vh auto;
+  margin: 2% auto;
   width: 95%;
-  max-height: 40vh;
+  max-height: 65vh;
   padding: 2% 0;
   overflow: auto;
   border: 1px solid black;
@@ -115,30 +132,39 @@ label {
 .list_item {
   display: flex;
   margin: 2% 2%;
-  height: 5vh;
+  height: auto;
   justify-content: space-between;
   border: 1px solid black;
 }
 .list_item_discription {
   display: flex;
   flex: 1;
+  justify-content: flex-start;
   border: 1px solid black;
   background-color: #4b4b4b;
-  border-radius: 2vw ;
+  border-radius: 1vw ;
   padding: 1% 1%;
-  padding-right: 0%;
-  font-size: 1.5rem;
   color: white;
   overflow: hidden;
 }
 .list_item_name {
   flex: 1;
-  padding: auto 1%;
+  padding: auto 1%!important;
+  font-size: 1.5vw;
+  margin-left: 1% auto;
+  display: flex;
+  align-items: center;
+}
+.sign{
+    font-size: large;
+    margin: 1% 1%;
+    align-content: flex-end;
+    
 }
 .list_item_quantity {
-  width: 10%;
-  padding: 2% auto !important ;
+  margin : auto 1%;
   text-align: center;
+  font-size: 1.25vw;
 }
 
 .edit {
@@ -155,17 +181,85 @@ label {
   color: white;
   background-color: black;
 }
-/* width
-::-webkit-scrollbar {
-    width: 10px;
-  }
+@media only screen and (max-width: 1000px){
+
+.container {
+margin: 3vw auto;
+width: 86vw;
+height: 85vh;
+flex-direction: column;
+ flex: 1:1;
+}
+
+.add_edit_part{
+    max-width: 84vw;
+    margin: auto 1vw;
+    flex: none;
+}
+.grocery_list_part{
+    max-width: 84vw;
+    margin: auto 1vw;
+    flex:1;
+}
+.title1 {
+    width: 20%;
+    margin: 1% auto;
+    padding: 1% 1%;
+    margin-bottom: 0;
+    font-size: 2vw;
+    border-radius: 2vw;
+}
+.form_item {
+ margin : 1% auto;    
+}
   
-  /* Track */
-/* ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+
+label {
+    margin-top: 1%;
+    font-size: 2.5vw;
+}
+#item_name {
+    margin-top: 0.5%;
+    padding: 0.5% 1%;
+    font-size: 2vw;
   }
-  
-  /* Handle */
-/* ::-webkit-scrollbar-thumb {
-    /* background: #888; 
-  }  */
+#item_quantity {
+    margin-top: 0.5%;
+    width: 30%;
+    padding: 0.5% 1%;
+    font-size: 2vw;
+}
+  #add_edit_button {
+    margin-right: 10%;
+    padding: 0.25% 0.25%;
+    width: 10%;
+    height: 4vw;
+    font-size: 2vw;
+  }
+.title2 {
+    width: 20%;
+    margin: 1% auto;
+    padding: 1% 1%;
+    margin-bottom: 0;
+    font-size: 2vw;
+    border-radius: 2vw;
+}
+.grocery_list {
+    margin: 1% auto;
+    width: 95%;
+    max-height: 65vh;
+    padding: 1% 0;
+ }
+.list_item_discription{
+    padding:0;
+}
+ .list_item_name {
+    font-size: 2.5vw;
+    padding: 0.25% 1%!important;
+  }
+  .list_item_quantity {
+    margin : auto 1%;
+    text-align: center;
+    font-size: 2.5vw;
+  }
+}

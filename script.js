@@ -59,6 +59,7 @@ const updateLocalStorage = () => {
          grocery_list.push(obj);
     });
     localStorage.setItem("itemList", JSON.stringify(grocery_list));
+
 };
 
   
@@ -106,14 +107,14 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault();
     const name = form.item_name.value;
     const quantity = form.item_quantity.value;
+
+    const obj = {
+        name : name,
+        quantity : quantity,
+        id : Math.random()
+    };
     
     if(form.classList.contains('add_item')){
-       
-        const obj = {
-           name : name,
-           quantity : quantity,
-           id : Math.random()
-        };
 
         if(checkElement(obj) == false){
            listItem = createListElement(obj);
@@ -122,13 +123,17 @@ form.addEventListener('submit',(e)=>{
 
      }else{
 
+        if(checkElement(obj) == true){
+            list.removeChild(curListItem);
+        }else{
         curListItem.children[0].children[0].innerText = name;
         curListItem.children[0].children[2].innerText = quantity;
-
+        }
         form.classList.remove('edit_item');
         form.classList.add('add_item');
         form.add_edit_button.innerText = "Add";
         title1.innerText = "Add Grocery Item";
+        
      }
      updateLocalStorage();
 
@@ -151,6 +156,7 @@ list.addEventListener('click',(e)=>{
          
         if(e.target.parentElement.classList.contains('delete') === true){
             list.removeChild(e.target.parentElement.parentElement);
+            updateLocalStorage();
         }else{
             curListItem = e.target.parentElement.parentElement ;
             editListItem(curListItem);
