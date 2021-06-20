@@ -121,12 +121,18 @@ form.addEventListener('submit',(e)=>{
         }
 
      }else{
-
-        if(checkElement(obj) == true){
+        
+        const curName = curListItem.children[0].children[0].innerText;
+        const curQuantity = curListItem.children[0].children[2].innerText;
+        if(curName == name ){
+            if(curQuantity != quantity){
+                curListItem.children[0].children[2].innerText = quantity
+            }
+        }else if(checkElement(obj) == true){
             list.removeChild(curListItem);
         }else{
-        curListItem.children[0].children[0].innerText = name;
-        curListItem.children[0].children[2].innerText = quantity;
+           curListItem.children[0].children[0].innerText = name;
+            curListItem.children[0].children[2].innerText = quantity;
         }
         form.classList.remove('edit_item');
         form.classList.add('add_item');
@@ -148,6 +154,7 @@ const editListItem = (curListItem) => {
     form.add_edit_button.innerText = "Edit";
     title1.innerText = "Edit Grocery Item";
 }
+
 
 list.addEventListener('click',(e)=>{
 
