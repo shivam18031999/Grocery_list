@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,15 +7,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
    
     <script src="script.js"  defer></script>
-    <title>Build as an assignment</title>
+    <title>Sprinklr Grocery</title>
   </head>
   <body>
      <header class="Disc">
-           <div> Shivam's Grocery</div>         
+           <div> Shivam's Grocery</div>   
+           <i class="fas fa-shopping-cart"></i>      
      </header> 
      <div class = "container"> 
           <div class="add_edit_part">
-          <div class="title1"> Add Grocery Item</div> 
+          <div class="title first"> Add Grocery Item</div> 
            <form class="form_item add_item">
                 <label for="item_name">Item Name</label>
                 <input type="text" id="item_name"  placeholder="Add Item Value" required>
@@ -24,7 +26,7 @@
             </form>
         </div>
         <div class="grocery_list_part"> 
-        <div class="title2"> Grocery List</div>
+        <div class="title second"> Grocery List</div>
         <ul class="grocery_list">
         </div>
             
