@@ -3,7 +3,7 @@ body {
   margin : auto 0;
 }
 .Disc{
-    height : 7%;
+    height :auto;
     background-color: black;
     margin:0%;
     padding: 0%;
@@ -11,28 +11,29 @@ body {
 }
 .Disc div{
     color:#ffffff;
-    width: 20vw;
-    font-size: 1.75vw;
+    width: auto;
+    font-size: 1.75rem;
+    height: auto;
     font-weight: bold;
-    padding: 1% 40vw;
+    padding: 1% ;
     flex:1;
+    display: flex;
+    justify-content: center;
 }
 .Disc i{
     align-self: right;
     color: white;
-    width: 5%;
+    width: auto;
     text-align: center;
-    margin: 0.8% auto;
-    font-size: 2vw;
+    padding: 1%;
+    font-size: 2rem;
 }
 
 .container {
   background-color: white;
-  border-radius: 10px;
-  margin: 5vh auto;
-  width: 95vw;
-  height: 80vh;
-  border: 1px solid black;
+ 
+  margin: 5vh 2vw;
+  
   display: flex;
   flex: 1:1;
 }
@@ -83,14 +84,14 @@ body {
 }
 label {
   margin-top: 1%;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 #item_name {
   margin-top: 1%;
   width: 90%;
   padding: 1% 1%;
   font-size: 1.25rem;
-  border-radius: 0.5vw;
+  border-radius: 0.5rem;
   border-color: blue;
 }
 
@@ -99,12 +100,12 @@ label {
   width: 30%;
   padding: 1% 1%;
   font-size: 1.25rem;
-  border-radius: 0.5vw;
+  border-radius: 0.5rem;
   border-color: blue;
 }
 #add_edit_button {
   margin-right: 10%;
-  padding: 1% 1%;
+  padding: 1% 1.5%;
   width: auto;
   height: auto;
   font-size: 1.25rem;
@@ -182,30 +183,26 @@ label {
 
 .container {
 margin: 3vw auto;
-width: 86vw;
-height: 85vh;
 flex-direction: column;
 flex: 1:1;
 }
 
 .add_edit_part{
-    max-width: 84vw;
+    max-width: 95vw;
     margin: auto 1vw;
     flex: none;
 }
 .grocery_list_part{
-    max-width: 84vw;
+    max-width: 95vw;
     margin: auto 1vw;
     flex:1;
 }
 .title {
     width: auto;
     margin: 1% auto;
+    font-size: 1.25rem;
     margin-bottom: 0;
     border-radius: 2vw;
-}
-.form_item {
- margin : 1% auto;    
 }
 .grocery_list {
     max-height: 65vh;
