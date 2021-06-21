@@ -30,12 +30,13 @@ body {
   background-color: white;
   border-radius: 10px;
   margin: 5vh auto;
-  width: 90vw;
+  width: 95vw;
   height: 80vh;
   border: 1px solid black;
   display: flex;
   flex: 1:1;
 }
+
 .add_edit_part{
     display: flex;
     flex-direction: column;
@@ -46,20 +47,28 @@ body {
     display: flex;
     flex-direction: column;
     flex:1;
+    max-width: 60% ;
 }
-.title1 {
-  width: 30%;
+.first{
+  background-color: #800080;
   margin: 3% auto;
-  padding: 1% 1%;
-  margin-bottom: 0;
-  font-size: 1.25vw;
+}
+.second{
+  margin: 2% auto;
+  background-color: #4b4b4b;
+
+}
+.title {
+  width: auto;
+  padding: 1% 2%;
+  margin-bottom: 0%;
+  font-size: 1.5rem;
   display:flex;
   justify-content: center;
   align-items: center;
   color: white;
   border: 1px solid white;
   border-radius: 0.75vw;
-  background-color: #800080;
 }
 
 .form_item {
@@ -73,14 +82,14 @@ body {
   flex-direction: column;
 }
 label {
-  margin-top: 2%;
-  font-size: 1.25vw;
+  margin-top: 1%;
+  font-size: 1.5rem;
 }
 #item_name {
   margin-top: 1%;
   width: 90%;
   padding: 1% 1%;
-  font-size: 1vw;
+  font-size: 1.25rem;
   border-radius: 0.5vw;
   border-color: blue;
 }
@@ -89,41 +98,28 @@ label {
   margin-top: 1%;
   width: 30%;
   padding: 1% 1%;
-  font-size: 1vw;
+  font-size: 1.25rem;
   border-radius: 0.5vw;
   border-color: blue;
 }
 #add_edit_button {
   margin-right: 10%;
-  padding: 0.25% 0.25%;
-  width: 10%;
-  height: 2vw;
-  font-size: 1vw;
+  padding: 1% 1%;
+  width: auto;
+  height: auto;
+  font-size: 1.25rem;
   align-self: flex-end;
   color: white;
   border-color: white;
   border-radius: 0.7vw;
   background-color: #800080;
 }
-.title2 {
-    width: 16%;
-    margin: 2% auto;
-    padding: 0.75% 1%;
-    margin-bottom: 0;
-    font-size: 1.25vw;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border: 1px solid white;
-    border-radius: 0.75vw;
-    background-color: #4b4b4b;
-  }
+
 .grocery_list {
   margin: 2% auto;
   width: 95%;
   max-height: 65vh;
-  padding: 2% 0;
+  padding: 1% 0 ;
   overflow: auto;
   border: 1px solid black;
   border-radius: 1vw;
@@ -134,39 +130,38 @@ label {
   margin: 2% 2%;
   height: auto;
   justify-content: space-between;
+  align-items: center;
   border: 1px solid black;
 }
 .list_item_discription {
   display: flex;
   flex: 1;
-  justify-content: flex-start;
-  border: 1px solid black;
+  justify-content: space-between;
   background-color: #4b4b4b;
   border-radius: 1vw ;
   padding: 1% 1%;
   color: white;
   overflow: hidden;
+  height: fit-content;
+  align-items: center;
 }
 .list_item_name {
   flex: 1;
   padding: auto 1%!important;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   margin-left: 1% auto;
   display: flex;
-  align-items: center;
+  word-break: break-all;
+  height: auto;
 }
 .sign{
     font-size: large;
     margin: 1% 1%;
-    align-content: flex-end;
-    
 }
 .list_item_quantity {
   margin : auto 1%;
-  text-align: center;
-  font-size: 1.25vw;
+  font-size: 1.25rem;
 }
-
 .edit {
   padding: 1% 1%;
   width: 3%;
@@ -181,6 +176,8 @@ label {
   color: white;
   background-color: black;
 }
+
+
 @media only screen and (max-width: 1100px){
 
 .container {
@@ -188,7 +185,7 @@ margin: 3vw auto;
 width: 86vw;
 height: 85vh;
 flex-direction: column;
- flex: 1:1;
+flex: 1:1;
 }
 
 .add_edit_part{
@@ -201,65 +198,30 @@ flex-direction: column;
     margin: auto 1vw;
     flex:1;
 }
-.title1 {
-    width: 20%;
+.title {
+    width: auto;
     margin: 1% auto;
-    padding: 1% 1%;
     margin-bottom: 0;
-    font-size: 2vw;
     border-radius: 2vw;
 }
 .form_item {
  margin : 1% auto;    
 }
-  
-
-label {
-    margin-top: 1%;
-    font-size: 2.5vw;
-}
-#item_name {
-    margin-top: 0.5%;
-    padding: 0.5% 1%;
-    font-size: 2vw;
-  }
-#item_quantity {
-    margin-top: 0.5%;
-    width: 30%;
-    padding: 0.5% 1%;
-    font-size: 2vw;
-}
-  #add_edit_button {
-    margin-right: 10%;
-    padding: 0.25% 0.25%;
-    width: 10%;
-    height: 4vw;
-    font-size: 2vw;
-  }
-.title2 {
-    width: 20%;
-    margin: 1% auto;
-    padding: 1% 1%;
-    margin-bottom: 0;
-    font-size: 2vw;
-    border-radius: 2vw;
-}
 .grocery_list {
-    margin: 1% auto;
-    width: 95%;
     max-height: 65vh;
-    padding: 1% 0;
  }
-.list_item_discription{
-    padding:0;
+
+ @media only screen and (max-width :600px){
+  
+.sign{
+  font-size: small;
 }
- .list_item_name {
-    font-size: 2.5vw;
-    padding: 0.25% 1%!important;
-  }
-  .list_item_quantity {
-    margin : auto 1%;
-    text-align: center;
-    font-size: 2.5vw;
-  }
+.edit{
+  font-size: small;
+}
+.delete{
+  font-size: small;
+}
+ }
+
 }

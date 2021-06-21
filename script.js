@@ -1,6 +1,6 @@
 form = document.querySelector('.form_item');
 list = document.querySelector('ul');
-title1 = document.querySelector('.title1');
+title1 = document.querySelector('.first')
 
 let curListItem;
 const createListElement = (listItemObject) => {
@@ -77,12 +77,6 @@ const renderLocalStorage = () => {
 
 renderLocalStorage();
 
-const resetForm = (formObject) => {
-     
-    formObject.item_name.value = "";
-    formObject.item_quantity.value = "";
-}
-
 
 const checkElement = (listItemObject) => {
      
@@ -100,6 +94,25 @@ const checkElement = (listItemObject) => {
 
     return check;
 };
+
+const resetMyForm = () => {
+
+    form.item_name.value = "";
+    form.item_quantity.value = "";
+
+    if(form.classList.contains('edit_item') === true){
+        form.classList.remove('edit_item');
+    }
+
+    if(form.classList.contains('add_item') === false){
+       form.classList.add('add_item');
+    }
+
+    form.add_edit_button.innerText = "Add";
+    title1.innerText = "Add Grocery Item";
+
+}
+
 
 form.addEventListener('submit',(e)=>{
     
@@ -134,15 +147,12 @@ form.addEventListener('submit',(e)=>{
            curListItem.children[0].children[0].innerText = name;
             curListItem.children[0].children[2].innerText = quantity;
         }
-        form.classList.remove('edit_item');
-        form.classList.add('add_item');
-        form.add_edit_button.innerText = "Add";
-        title1.innerText = "Add Grocery Item";
+
         
      }
      updateLocalStorage();
 
-     resetForm(form);
+     resetMyForm();
 });
 
 const editListItem = (curListItem) => {
@@ -161,8 +171,11 @@ list.addEventListener('click',(e)=>{
     if(e.target.tagName == 'I'){
          
         if(e.target.parentElement.classList.contains('delete') === true){
+            
+          
             list.removeChild(e.target.parentElement.parentElement);
             updateLocalStorage();
+            resetMyForm();
         }else{
             curListItem = e.target.parentElement.parentElement ;
             editListItem(curListItem);
